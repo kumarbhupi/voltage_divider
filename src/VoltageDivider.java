@@ -1,3 +1,5 @@
+import java.util.SortedSet;
+
 public class VoltageDivider implements Comparable<VoltageDivider> {
   private Resistor resistor1 = null;
   private Resistor resistor2 = null;
@@ -12,7 +14,7 @@ public class VoltageDivider implements Comparable<VoltageDivider> {
 
   @Override
   public int compareTo(VoltageDivider voltageDivider) {
-    return 0;
+    return Double.compare(coincidence, voltageDivider.coincidence);
   }
 
   @Override
