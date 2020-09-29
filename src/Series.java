@@ -30,5 +30,6 @@ public class Series {
         resistors.add(new Resistor(value* power, this));
       }
     }
+
   }
 }

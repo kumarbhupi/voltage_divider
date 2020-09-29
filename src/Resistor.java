@@ -1,4 +1,4 @@
-public class Resistor {
+public class Resistor implements Comparable<Resistor> {
   private double resistance;
   private Series series = null;
 
@@ -19,4 +19,9 @@ public class Resistor {
   public String toString() {
     return "Resistance " + resistance + ",series " + series.getName() + ", precision " + series.getPrecision();
   }// to print a Resistor with System.out.println
+
+  @Override
+  public int compareTo(Resistor resistor) {
+    return Double.compare(resistance, resistor.getResistance());
+  }
 }

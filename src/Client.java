@@ -5,11 +5,12 @@ public class Client {
     SeriesCatalog seriesCatalog = new SeriesCatalog();
 
     double k = 0.5;
-    String name = "E24";
+    String name = "E6";
     double coincidence = 80.;
     Series series = seriesCatalog.findSeriesByName(name);
 
-    //VoltageDividerCalculation.calculate(k, coincidence, series);
+
+    //SortedSet<VoltageDivider> result = VoltageDividerCalculation.linearCalculate(k, coincidence, series);
     SortedSet<VoltageDivider> result = VoltageDividerCalculation.calculate(k, coincidence, series);
 
     for (VoltageDivider voltageDivider: result) {
