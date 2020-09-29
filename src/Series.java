@@ -24,5 +24,11 @@ public class Series {
     res += "\nPrecision " + precision;
     return res;
   }
-  private void makeResistors() { /* TODO */ }
+  private void makeResistors() {
+    for (double value: normalizedValues) {
+      for (double power : PowerFactors){
+        resistors.add(new Resistor(value* power, this));
+      }
+    }
+  }
 }

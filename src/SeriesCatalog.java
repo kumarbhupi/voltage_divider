@@ -66,13 +66,15 @@ public class SeriesCatalog {
   public SeriesCatalog(){
     for (int i = 0; i < SeriesName.length; i++) {
       Series s = new Series(SeriesName[i], NormalizedValues[i], SeriesPrecision[i]);
-      System.out.println(s);
+      //System.out.println(s);
       series.add(s);
     }
   }
 
   public Series findSeriesByName(String name){
-    //TODO: Implement this method
+    for (int i = 0; i < SeriesName.length; i++) {
+      if (SeriesName[i].equals(name)) return series.get(i);
+    }
     return null;
   }
 
