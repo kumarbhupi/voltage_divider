@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+import java.util.List;
 import java.util.SortedSet;
 
 public class Client {
@@ -10,8 +12,8 @@ public class Client {
     Series series = seriesCatalog.findSeriesByName(name);
 
 
-    //SortedSet<VoltageDivider> result = VoltageDividerCalculation.linearCalculate(k, coincidence, series);
-    SortedSet<VoltageDivider> result = VoltageDividerCalculation.calculate(k, coincidence, series);
+    //List<VoltageDivider> result = VoltageDividerCalculation.calculate(k, coincidence, series);
+    List<VoltageDivider> result = VoltageDividerCalculation.linearCalculate(k, coincidence, series);
 
     for (VoltageDivider voltageDivider: result) {
       System.out.println(voltageDivider.toString());
