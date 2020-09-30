@@ -4,7 +4,6 @@ import java.util.*;
 public class VoltageDividerCalculation {
   public static List<VoltageDivider> calculate(double voltageDivision, double coincidence, Series s) {
     ArrayList<VoltageDivider> results = new ArrayList<>();
-    //SortedSet<VoltageDivider> results = new TreeSet<VoltageDivider>();
     List<Resistor> resistors = s.getResistors();
 
     for (Resistor r1 : resistors) {
@@ -26,7 +25,6 @@ public class VoltageDividerCalculation {
     List<Resistor> resistors = s.getResistors();
     Collections.sort(resistors);
     List<VoltageDivider> results = new ArrayList<>();
-    int counter = 0;
 
     double tol = voltageDivision * (100 - coincidence) / 100;
 
