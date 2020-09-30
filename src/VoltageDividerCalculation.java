@@ -41,11 +41,6 @@ public class VoltageDividerCalculation {
             VoltageDivider voltageDivider = new VoltageDivider(r1, rx, r1r2Coincidence);
             results.add(voltageDivider);
 
-            System.out.println(++counter+" - R1 = " + r1 + " R2 = " + rx);
-            System.out.println("Voltage division " + r1r2VoltageDivision + "\ncoincidence with " +
-                voltageDivision+ " : " +
-                r1r2Coincidence + "% \n");
-
           } else {
             break;
           }
